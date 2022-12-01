@@ -9,15 +9,22 @@ import Header from "./componets/header";
 import List from "./componets/list";
 
 
-const BASEURL = "https://8000-morganmonta-leaguetable-ro14ml096ug.ws-us77.gitpod.io/api/teams/?format=json";
+const BASEURL = "https://8000-morganmonta-leaguetable-ro14ml096ug.ws-us77.gitpod.io/api/teams/";
 
 function App() { 
 
-  const [dogData, setDogData] = useState(null);
+  const [data, setData] = useState(null);
   useEffect(() =>{
-    axios.get(BASEURL).then((response) => setDogData(response.data));
-    console.log(dogData)
+    axios.get(BASEURL).then((response) =>{ setData(response.data)
+    });
+    
   }, []);
+  
+  
+  const newth = data
+  if(newth){
+    console.log(newth[0].team_name)
+  }
 
 
 
@@ -37,8 +44,7 @@ function App() {
           Learn More About Soccer Tables
         </a>
         <div>
-          {/* {data.results[0].team_name} */}
-          {/* <List data={dogData} /> */}
+          <List datas={data} />
         </div>
       </header>
     </div>

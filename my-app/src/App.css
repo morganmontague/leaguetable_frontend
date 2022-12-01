@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+
+#drop_down {
+  background-color: #184427;
+  font-size: calc(4px + 2vmin);
+  color: white;
+}
