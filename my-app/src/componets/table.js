@@ -7,26 +7,36 @@ function Table (props) {
     }
     return (
 <>
-<table classname="table table_hover table-bordered" id="drop_down">
+<table className="table table_hover table_bordered" id="drop_down">
     <thead>
         <tr>
-        <th scope="col">Pos</th>
+        <th scope="col"><abbr title="Position">Pos</abbr></th>
         <th scope="col">Team</th>
-        <th scope="col">Pld</th>
-        <th scope="col">W</th>
-        <th scope="col">D</th>
-        <th scope="col">L</th>
-        <th scope="col">GF</th>
-        <th scope="col">GA</th>
-        <th scope="col">GD</th>
-        <th scope="col">Pts</th>
+        <th scope="col"><abbr title="Games Played">Pld</abbr></th>
+        <th scope="col"><abbr title="Games Won">W</abbr></th>
+        <th scope="col"><abbr title="Games Drawn">D</abbr></th>
+        <th scope="col"><abbr title="Games Lost">L</abbr></th>
+        <th scope="col"><abbr title="Goals Scored">GF</abbr></th>
+        <th scope="col"><abbr title="Goals Conceded">GA</abbr></th>
+        <th scope="col"><abbr title="Goal Difference">GD</abbr></th>
+        <th scope="col"><abbr title="Points">Pts</abbr></th>
         </tr>
     </thead>
     <tbody>
     {props.data.map( (team) => (
-                <div key={team.id}> 
-                    <Row team = {team.team_name} position = {team.rank}/>
-                </div>
+                
+                    <Row key={team.id}
+                    position = {team.rank}
+                    team = {team.team_name} 
+                    games_played = {team.games_played} 
+                    wins={team.wins} 
+                    ties={team.ties} 
+                    losses={team.losses}
+                    goals_scored={team.goals_scored}
+                    points={team.points}
+                    />
+                    
+                
             ))}
     </tbody>
     </table>

@@ -9,12 +9,6 @@ function List(props) {
     }
 
 
-
-const players = props.data.map( (team) => (
-        <div key={team.team_name}> 
-        {team.players}
-        </div>))
-
     return (
         <div>
             {props.data.map( (team) => (
@@ -28,9 +22,6 @@ const players = props.data.map( (team) => (
         </div>
     )
 }
-
-
-
 
 
 export default List;

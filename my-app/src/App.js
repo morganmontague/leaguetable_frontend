@@ -46,8 +46,8 @@ function App() {
         </a>
         <div>
           <Table data={data}/>
-          <List data={data} />
         </div>
+          <List data={data} />
       </header>
     </div>
   );

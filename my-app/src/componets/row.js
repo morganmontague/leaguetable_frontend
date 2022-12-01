@@ -3,17 +3,16 @@ function Row (props) {
     return (
         <>
         <tr>
-            {/* <th scope="row">1</th> */}
             <td>{props.position}</td>
-            <td colspan="2">{props.team}</td>
-            {/* <td>{Played}</td>
-            <td>{Wins}</td>
-            <td>{Draws}</td>
-            <td>{Loses}</td>
-            <td>{Goals_scored}</td>
-            <td>{Goals_conceded}r</td>
-            <td>{Goal_dif}</td>
-            <td>{Points}</td> */}
+            <td >{props.team}</td>
+            <td>{props.games_played}</td>
+            <td>{props.wins}</td>
+            <td>{props.ties}</td>
+            <td>{props.losses}</td>
+            <td>{props.goals_scored}</td>
+            <td>Meh</td>
+            <td>TBD</td>
+            <td>{props.points}</td>
         </tr>
         </>
     )
@@ -21,3 +20,4 @@ function Row (props) {
 
 export default Row 
 
+// colspan="2"
