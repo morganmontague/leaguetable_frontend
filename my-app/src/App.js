@@ -8,6 +8,7 @@ import "./index.css";
 import Header from "./componets/header";
 import List from "./componets/list";
 import Table from "./componets/table";
+import TableExplained from "./componets/tableExplained";
 
 
 const BASEURL = "https://8000-morganmonta-leaguetable-ro14ml096ug.ws-us77.gitpod.io/api/teams/";
@@ -20,13 +21,6 @@ function App() {
     });
     
   }, []);
-  
-  
-  // const newth = data
-  // if(newth){
-  //   console.log(newth[0].team_name)
-  // }
-
 
 
   return (
@@ -48,6 +42,8 @@ function App() {
           <Table data={data}/>
         </div>
           <List data={data} />
+          <br></br>
+          <TableExplained />
       </header>
     </div>
   );

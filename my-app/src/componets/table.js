@@ -2,11 +2,13 @@ import Row from "./row"
 
 
 function Table (props) {
+    
     if(!props.data){
         return
     }
+    let sorty = props.data.sort(function(a, b){return a.rank - b.rank});
     return (
-<>
+        <>
 <table className="table table_hover table_bordered" id="drop_down">
     <thead>
         <tr>
@@ -23,7 +25,10 @@ function Table (props) {
         </tr>
     </thead>
     <tbody>
-    {props.data.map( (team) => (
+    {
+        
+
+        sorty.map( (team) => (
                 
                     <Row key={team.id}
                     position = {team.rank}
