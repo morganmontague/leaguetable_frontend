@@ -16,6 +16,7 @@ function App() {
   const [dogData, setDogData] = useState(null);
   useEffect(() =>{
     axios.get(BASEURL).then((response) => setDogData(response.data));
+    console.log(dogData)
   }, []);
 
 
@@ -37,7 +38,7 @@ function App() {
         </a>
         <div>
           {/* {data.results[0].team_name} */}
-          <List data={dogData} />
+          {/* <List data={dogData} /> */}
         </div>
       </header>
     </div>
