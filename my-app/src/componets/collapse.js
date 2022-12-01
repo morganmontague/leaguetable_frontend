@@ -5,15 +5,15 @@ function Collapse(props) {
           className="btn btn-small"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target={"#teamOnfo" + props.index}
+          data-bs-target={"#teamInfo" + props.index}
           aria-expanded="false"
-          aria-controls={"#teamOnfo" + props.index}
+          aria-controls={"#teamInfo" + props.index}
           id="drop_down"
         >
           Players
         </button>
   
-        <div className="collapse" id={"teamOnfo" + props.index}>
+        <div className="collapse" id={"teamInfo" + props.index}>
           <div className="card card-body" id="drop_down">
             {props.team}
           </div>

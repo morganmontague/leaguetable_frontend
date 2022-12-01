@@ -7,6 +7,7 @@ import axios from "axios";
 import "./index.css";
 import Header from "./componets/header";
 import List from "./componets/list";
+import Table from "./componets/table";
 
 
 const BASEURL = "https://8000-morganmonta-leaguetable-ro14ml096ug.ws-us77.gitpod.io/api/teams/";
@@ -21,10 +22,10 @@ function App() {
   }, []);
   
   
-  const newth = data
-  if(newth){
-    console.log(newth[0].team_name)
-  }
+  // const newth = data
+  // if(newth){
+  //   console.log(newth[0].team_name)
+  // }
 
 
 
@@ -44,7 +45,8 @@ function App() {
           Learn More About Soccer Tables
         </a>
         <div>
-          <List datas={data} />
+          <Table data={data}/>
+          <List data={data} />
         </div>
       </header>
     </div>
