@@ -6,7 +6,15 @@ function Table (props) {
     if(!props.data){
         return
     }
-    let sorty = props.data.sort(function(a, b){return a.rank - b.rank});
+    let sorty = props.data.sort(function(a, b){return b.points - a.points});
+    function indexId(){
+        for (let i = 0; i < sorty.length; i++) {
+                const blah = sorty[i];
+                console.log(blah)
+    } 
+    
+}
+indexId()
     return (
         <>
 <table className="table table_hover table_bordered" id="drop_down">
