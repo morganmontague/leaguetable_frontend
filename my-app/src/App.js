@@ -32,7 +32,7 @@ function App() {
         </div>
         <a
           className="App-link"
-          href="https://www.geoguessr.com/"
+          href="https://footballhandbook.com/how-to-read-a-soccer-table/"
           target="_blank"
           rel="noopener noreferrer"
         >

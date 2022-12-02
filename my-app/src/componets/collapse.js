@@ -15,7 +15,7 @@ function Collapse(props) {
   
         <div className="collapse" id={"teamInfo" + props.index}>
           <div className="card card-body" id="drop_down">
-            {props.team}
+            <li>{props.team}</li>
           </div>
         </div>
       </>
