@@ -1,4 +1,5 @@
-import React from 'react';
+
+import 'bootstrap/dist/css/bootstrap.css';import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import { BrowserRouter } from "react-router-dom";
@@ -6,6 +7,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Info from './page/info';
+import Table_page from './page/table_page';
 // import { GlobalProvider } from './context/GlobalState';
 import {
   BrowserRouter as Router,
@@ -23,6 +25,9 @@ root.render(
         </Routes>
         <Routes>
             <Route path="/info" element={<Info />} ></Route>
+        </Routes>
+        <Routes>
+            <Route path="/table" element={<Table_page />} ></Route>
         </Routes>
 
     </Router>

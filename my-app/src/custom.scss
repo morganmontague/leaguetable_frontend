@@ -1,0 +1,15 @@
+
+ $body-bg:#111726;
+ $theme-colors: (
+   "primary":#A2AEBB,
+   "dark":#313638,
+   "alert": #E4B363,
+   "light":white,
+ ); 
+
+
+
+
+
+ // Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';

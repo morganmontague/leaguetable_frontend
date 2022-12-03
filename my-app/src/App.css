@@ -63,10 +63,3 @@ body {
 
   }
 }
-
-$theme-colors: (
-  "primary":#A2AEBB,
-  "dark":#313638,
-  "alert": #E4B363,
-  "light":white,
-);
