@@ -1,8 +1,8 @@
 function Header () {
     return (        
-    <div>
-        <h1>It's called Soccer</h1>
-    </div>
+    <header className="header_page">
+        IT'S CALLED SOCCER
+    </header>
     )
 }
 

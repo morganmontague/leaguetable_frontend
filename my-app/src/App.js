@@ -1,14 +1,20 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import ReactDOM from 'react-dom/client';
+import {
+  BrowserRouter as Router, Switch,} from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom"
 import "./index.css";
-import Header from "./componets/header";
+import Logo from "./componets/logo";
 import List from "./componets/list";
 import Table from "./componets/table";
 import TableExplained from "./componets/tableExplained";
+import Navbar from "./componets/navbar";
 
 
 const BASEURL = "https://8000-morganmonta-leaguetable-ro14ml096ug.ws-us77.gitpod.io/api/teams/";
@@ -25,25 +31,24 @@ function App() {
 
   return (
     <div className="App">
+      
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        
         <div>
-          <Header />
+          <Navbar />
+          <Logo />
         </div>
-        <a
-          className="App-link"
-          href="https://footballhandbook.com/how-to-read-a-soccer-table/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn More About Soccer Tables
-        </a>
-        <div>
-          <Table data={data}/>
-        </div>
+          <Link to ='/info' className='nav-item'>
+            Learn More About Soccer Tables
+          </Link>
+            <link to='/table'>
+              <button>
+                Table View
+              </button>
+            </link>
           <List data={data} />
           <br></br>
-          <TableExplained />
+          <Outlet />
       </header>
     </div>
   );

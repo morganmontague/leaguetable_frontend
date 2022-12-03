@@ -15,12 +15,21 @@
 
 body {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: white;
+}
+.header_page{
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(48px + 2vmin);
   color: white;
 }
 
@@ -43,3 +52,21 @@ body {
   font-size: calc(4px + 2vmin);
   color: white;
 }
+
+#info_page {
+
+}
+
+@media (max-width: 510px) {
+  .header_page {
+    font-size: calc(26px + 2vmin);
+
+  }
+}
+
+$theme-colors: (
+  "primary":#A2AEBB,
+  "dark":#313638,
+  "alert": #E4B363,
+  "light":white,
+);
