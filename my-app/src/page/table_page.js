@@ -1,13 +1,16 @@
 import Navbar from "../componets/navbar";
 import Table from "../componets/table";
 
-function Table_page(){
+function TablePage(props){
 return (
     <>
     <Navbar />
-    <Table />
+    <Table  />
+    <div>
+        test
+    </div>
     </>
 )
 }
 
-export default Table_page
+export default TablePage

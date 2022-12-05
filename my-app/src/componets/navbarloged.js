@@ -1,11 +1,18 @@
 import React from 'react';
 import App from '../App';
-
+import authService from '../services/auth.service';
 import { Link } from "react-router-dom"
+import { useNavigate } from 'react-router-dom';
 // import Axios from 'axios'
 
-function Navbar(){
+function NavbarLog(){
     
+    let navigate = useNavigate();
+    function Logout() {
+        navigate("/");
+        authService.logout();
+        window.location.reload();
+      }
     return (
 <div className="container">
     <div className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
@@ -15,11 +22,11 @@ function Navbar(){
         <li className="nav-item">
           <Link to='/'  className="nav-link" aria-current="page">Home</Link>
         </li>
-        <li className="nav-item">
-          <Link to='/login' className="nav-link">Login</Link>
-          </li>
-          <li className="nav-item">
-          <Link to='/register' className="nav-link">Register</Link>
+
+          <li className="nav-item" >
+            <button className='btn btn-primary' onClick={Logout}>
+                Logout
+            </button>
           </li>
       </ul>
     </div>
@@ -27,4 +34,4 @@ function Navbar(){
     )
 }
 
-export default Navbar
+export default NavbarLog

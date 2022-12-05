@@ -35,7 +35,7 @@ function App() {
   }, []);
 
   function TableSwapFunction () {
-    <Table_page />
+    <Table_page  data ={data}/>
     navigate('/table')
   }
   return (
@@ -54,6 +54,7 @@ function App() {
                 Table View
               </button>
           <List data={data} />
+          <Table data={data}/>
           <br></br>
           <Outlet />
       </header>
