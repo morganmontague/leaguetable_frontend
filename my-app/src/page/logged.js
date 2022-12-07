@@ -35,7 +35,7 @@ function Logged() {
     )
 console.log(data)
 
-
+let useID =state.currentUser.user_id
 
     function TableSwapFunction () {
       <Table_page  />
@@ -51,6 +51,7 @@ console.log(data)
             <NavbarLog />
           </div>
           <h3>
+            {useID}
           </h3>
             <Link to ='/info' className='nav-item'>
               Learn More About Soccer Tables

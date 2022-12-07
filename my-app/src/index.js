@@ -20,6 +20,7 @@ import {
 import { GlobalProvider } from './context/GlobalState';
 import Register from './page/register';
 import Login from './page/login';
+import AllPlayers from './page/allPlayers';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -32,6 +33,7 @@ root.render(
                 <Route path="/register" element={<Register />} ></Route>
                 <Route path="/login" element={<Login />} ></Route>
                 <Route path="/home" element={<Logged />} ></Route>
+                <Route path="/players" element={<AllPlayers />} ></Route>
             </Routes>
         </Router>
     </GlobalProvider>

@@ -1,19 +1,25 @@
 import NavbarLog from "../componets/navbarloged";
 import Table from "../componets/table";
+
 import React, { useState, useEffect } from "react";
+import { useGlobalState } from "../context/GlobalState";
+import { useNavigate } from 'react-router-dom';
 import request from "../services/api.request";
 
 
-    function TablePage(props){
+    function AllPlayers(props){
 
 
     let [data, setData] = useState([])
+    let [state, dispatch] = useGlobalState();
+    let navigate = useNavigate();
 
+    console.log(state)
 
     useEffect(() => {
     async function callAPI(){
     let options = {
-    url: 'teams/',
+    url: 'players/',
     method: 'GET', 
     }
     let resp = await request(options) 
@@ -33,13 +39,18 @@ console.log(data)
 return (
     <>
     <NavbarLog />
-    <Table data={data} />
-    <div>
-        test
-    </div>
+    <ul>{data.map((player) => 
+        <li key={player.id}>
+            Player Name: {player.player_name}
+            {/* <li>
+                Nationality: {player.nationailty_id}
+            </li> */}
+        </li>
+    )}
+    </ul>
     </>
 )
 }
 
-export default TablePage
+export default AllPlayers
 

@@ -23,7 +23,7 @@ function NavbarLog(){
           <Link to='/home'  className="nav-link" aria-current="page">Home</Link>
         </li>
         <li className="nav-item">
-          <Link to='/home'  className="nav-link" aria-current="page">All Players</Link>
+          <Link to='/players'  className="nav-link" aria-current="page">All Players</Link>
         </li>
         <li className="nav-item">
           <Link to='/'  className="nav-link" aria-current="page" onClick={Logout}>Logout</Link>
