@@ -6,15 +6,21 @@ function Table (props) {
     if(!props.data){
         return
     }
+    let num_teams = []
     let sorty = props.data.sort(function(a, b){return b.points - a.points});
     function indexId(){
         for (let i = 0; i < sorty.length; i++) {
-                const blah = sorty[i];
-                // console.log(blah)
-    } 
-    
-}
-indexId()
+            const blah = sorty[i];
+            console.log(blah)
+        } 
+        
+    }
+    indexId()
+    for (let index = 0; index < sorty.length; index++) {
+        num_teams.push(index + 1)
+        
+    }
+    console.log(num_teams)
     return (
         <>
 <table className="table table_hover table_bordered" id="drop_down">
@@ -39,7 +45,7 @@ indexId()
         sorty.map( (team) => (
                 
                     <Row key={team.id}
-                    position = {team.rank}
+                    position = {num_teams}
                     team = {team.team_name} 
                     games_played = {team.games_played} 
                     wins={team.wins} 

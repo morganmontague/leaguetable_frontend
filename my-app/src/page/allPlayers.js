@@ -32,19 +32,19 @@ import request from "../services/api.request";
 }, []
     )
 console.log(data)
+    function function_sort(){
+    data.sort(function(a, b){return b.age - a.age});
+}
 
-    
 
 
 return (
     <>
     <NavbarLog />
+    <button onClick={function_sort}>view one</button>
     <ul>{data.map((player) => 
         <li key={player.id}>
-            Player Name: {player.player_name}
-            {/* <li>
-                Nationality: {player.nationailty_id}
-            </li> */}
+            Player Name: {player.player_name} and he is {player.age} years old.
         </li>
     )}
     </ul>

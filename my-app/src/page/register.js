@@ -9,6 +9,8 @@ export default function Register () {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [email, setEmail] = useState("")
+  const [first_name, setfirst_name] = useState("")
+  const [last_name, setlast_name] = useState("")
 
 const userNameInput = (e) => {
   setUsername(e.target.value)
@@ -19,12 +21,19 @@ const passwordInput = (e) => {
 const emailInput = (e) => {
     setEmail(e.target.value)
 }
+const first_nameInput = (e) =>
+  setfirst_name(e.target.value)
+
+  const last_nameInput = (e) =>
+  setlast_name(e.target.value)
 
 const submit = () => {
   axios.post('https://8000-morganmonta-leaguetable-ro14ml096ug.ws-us77.gitpod.io/api/user/create/', {
       "username": username,
       "password": password,
-      "email": email
+      "email": email,
+      "first_name": first_name,
+      "last_name": last_name
   })
 }
 
@@ -38,6 +47,12 @@ const submit = () => {
     </div>
     <div className="col-12 pb-4 d-flex justify-content-center">
       <input onChange={emailInput} type="text" placeholder="E-mail"/>
+    </div>
+    <div className="col-12 pb-4 d-flex justify-content-center">
+      <input onChange={first_nameInput} type="text" placeholder="First Name"/>
+    </div>
+    <div className="col-12 pb-4 d-flex justify-content-center">
+      <input onChange={last_nameInput} type="text" placeholder="Last Name"/>
     </div>
     <div className="col-12 pb-4 d-flex justify-content-center">
       <input onChange={passwordInput} type="password" placeholder="Password"/>

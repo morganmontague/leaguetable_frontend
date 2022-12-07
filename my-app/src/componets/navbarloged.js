@@ -26,6 +26,9 @@ function NavbarLog(){
           <Link to='/players'  className="nav-link" aria-current="page">All Players</Link>
         </li>
         <li className="nav-item">
+          <Link to='/myteam'  className="nav-link" aria-current="page">My Team</Link>
+        </li>
+        <li className="nav-item">
           <Link to='/'  className="nav-link" aria-current="page" onClick={Logout}>Logout</Link>
         </li>
       </ul>
