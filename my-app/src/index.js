@@ -8,6 +8,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Info from './page/info';
 import TablePage from './page/table_page';
+import Logged from './page/logged';
 // import { GlobalProvider } from './context/GlobalState';
 import {
   BrowserRouter as Router,
@@ -26,18 +27,11 @@ root.render(
         <Router>
             <Routes>
                 <Route path="/" element={<App />} ></Route>
-            </Routes>
-            <Routes>
                 <Route path="/info" element={<Info />} ></Route>
-            </Routes>
-            <Routes>
                 <Route path="/table" element={<TablePage />} ></Route>
-            </Routes>
-            <Routes>
                 <Route path="/register" element={<Register />} ></Route>
-            </Routes>
-            <Routes>
                 <Route path="/login" element={<Login />} ></Route>
+                <Route path="/home" element={<Logged />} ></Route>
             </Routes>
         </Router>
     </GlobalProvider>

@@ -10,7 +10,7 @@ function Table (props) {
     function indexId(){
         for (let i = 0; i < sorty.length; i++) {
                 const blah = sorty[i];
-                console.log(blah)
+                // console.log(blah)
     } 
     
 }

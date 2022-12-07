@@ -32,9 +32,9 @@ const Login = () => {
           let data = jwtDecode(resp.access)
           await dispatch({
             currentUserToken: resp.access,
-            currentUser: data
+            currentUser: data,
           })
-          navigate('/info')
+          navigate('/home')
         });
     }
       return (

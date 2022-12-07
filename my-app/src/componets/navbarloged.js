@@ -20,14 +20,14 @@ function NavbarLog(){
 
       <ul className="nav nav-pills">
         <li className="nav-item">
-          <Link to='/'  className="nav-link" aria-current="page">Home</Link>
+          <Link to='/home'  className="nav-link" aria-current="page">Home</Link>
         </li>
-
-          <li className="nav-item" >
-            <button className='btn btn-primary' onClick={Logout}>
-                Logout
-            </button>
-          </li>
+        <li className="nav-item">
+          <Link to='/home'  className="nav-link" aria-current="page">All Players</Link>
+        </li>
+        <li className="nav-item">
+          <Link to='/'  className="nav-link" aria-current="page" onClick={Logout}>Logout</Link>
+        </li>
       </ul>
     </div>
   </div>
