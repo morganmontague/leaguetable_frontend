@@ -3,13 +3,13 @@ import 'bootstrap/dist/css/bootstrap.css';import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import { BrowserRouter } from "react-router-dom";
-import './index.css';
+import './CSS/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Info from './page/info';
 import TablePage from './page/table_page';
 import Logged from './page/logged';
-// import { GlobalProvider } from './context/GlobalState';
+import Player_Register from './page/newPlayer';
 import {
   BrowserRouter as Router,
   // Switch,
@@ -36,6 +36,7 @@ root.render(
                 <Route path="/home" element={<Logged />} ></Route>
                 <Route path="/players" element={<AllPlayers />} ></Route>
                 <Route path="/myteam" element={<MyTeam />} ></Route>
+                <Route path="/new_player" element={<Player_Register />} ></Route>
             </Routes>
         </Router>
     </GlobalProvider>

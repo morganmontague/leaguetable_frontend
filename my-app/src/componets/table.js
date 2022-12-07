@@ -20,6 +20,7 @@ function Table (props) {
         num_teams.push(index + 1)
         
     }
+    let test = 0
     console.log(num_teams)
     return (
         <>
@@ -45,7 +46,7 @@ function Table (props) {
         sorty.map( (team) => (
                 
                     <Row key={team.id}
-                    position = {num_teams}
+                    position = {(test)+1}
                     team = {team.team_name} 
                     games_played = {team.games_played} 
                     wins={team.wins} 

@@ -5,6 +5,8 @@ import React, { useState, useEffect } from "react";
 import { useGlobalState } from "../context/GlobalState";
 import { useNavigate } from 'react-router-dom';
 import request from "../services/api.request";
+import Player_Register from "./newPlayer";
+import { Link } from "react-router-dom";
 
 
     function AllPlayers(props){
@@ -37,17 +39,25 @@ console.log(data)
 }
 
 
+data.sort(function(a, b){return b.age - a.age});
 
 return (
     <>
+    <div className=" container" id="player_page">
     <NavbarLog />
-    <button onClick={function_sort}>view one</button>
+    <div className="nav-items" id="link_page">
+                <Link to ='/new_player' className='nav-link' aria-current="page">
+                    Add Players
+                </Link>
+            </div>
     <ul>{data.map((player) => 
         <li key={player.id}>
             Player Name: {player.player_name} and he is {player.age} years old.
         </li>
     )}
     </ul>
+    </div>
+
     </>
 )
 }

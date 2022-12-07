@@ -3,6 +3,7 @@ import App from '../App';
 import authService from '../services/auth.service';
 import { Link } from "react-router-dom"
 import { useNavigate } from 'react-router-dom';
+import Header from './header';
 // import Axios from 'axios'
 
 function NavbarLog(){
@@ -14,13 +15,16 @@ function NavbarLog(){
         window.location.reload();
       }
     return (
-<div className="container">
+      <>
+      <Header />
+      <div className="container">
     <div className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-
-
       <ul className="nav nav-pills">
         <li className="nav-item">
           <Link to='/home'  className="nav-link" aria-current="page">Home</Link>
+        </li>
+        <li className="nav-item">
+          <Link to='/table'  className="nav-link" aria-current="page">Table View</Link>
         </li>
         <li className="nav-item">
           <Link to='/players'  className="nav-link" aria-current="page">All Players</Link>
@@ -34,6 +38,10 @@ function NavbarLog(){
       </ul>
     </div>
   </div>
+      
+      
+      </>
+
     )
 }
 

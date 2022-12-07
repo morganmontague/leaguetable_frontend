@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'atlanta_collegeregular';
+  src: url('atlanta-college.regular-webfont.woff2') format('woff2'),
+       url('atlanta-college.regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
 .App {
   text-align: center;
 }
@@ -14,8 +22,8 @@
 }
 
 body {
-  background-color: #282c34;
-  min-height: 80vh;
+  background-color: #000d28;
+  /* min-height: 80vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +32,8 @@ body {
   color: white;
 }
 .header_page{
-  background-color: #282c34;
+  font-family: 'atlanta_collegeregular';
+  background-color: #000d28;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,11 +55,24 @@ body {
   }
 }
 
+#player_page{
+  /* background-color: #282c34; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(6px + 2vmin);
+  color: white;
+}
 
 #drop_down {
   background-color: #184427;
   font-size: calc(4px + 2vmin);
   color: white;
+}
+
+#link_page {
+  color: #0d6efd
 }
 
 #info_page {
@@ -60,6 +82,6 @@ body {
 @media (max-width: 510px) {
   .header_page {
     font-size: calc(26px + 2vmin);
-
+    font-family: var(--bs-body-font-family);
   }
 }

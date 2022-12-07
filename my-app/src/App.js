@@ -1,5 +1,5 @@
 import './custom.scss';
-import './App.css';
+import './CSS/App.css'
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import React, { useState, useEffect } from "react";
@@ -9,7 +9,7 @@ import {
   BrowserRouter as Router, Switch,} from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom"
-import "./index.css";
+import "./CSS/index.css";
 import { useNavigate } from 'react-router-dom';
 
 import Logo from "./componets/logo";
