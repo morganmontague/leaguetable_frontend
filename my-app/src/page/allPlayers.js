@@ -9,7 +9,7 @@ import Player_Register from "./newPlayer";
 import { Link } from "react-router-dom";
 
 
-    function AllPlayers(props){
+    function AllPlayers(){
 
 
     let [data, setData] = useState([])
@@ -43,7 +43,7 @@ data.sort(function(a, b){return b.age - a.age});
 
 return (
     <>
-    <div className=" container" id="player_page">
+    <div className=" container player_page">
     <NavbarLog />
     <div className="nav-items" id="link_page">
                 <Link to ='/new_player' className='nav-link' aria-current="page">
@@ -57,7 +57,6 @@ return (
     )}
     </ul>
     </div>
-
     </>
 )
 }

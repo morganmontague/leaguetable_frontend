@@ -1,16 +1,11 @@
-// "player_name": "Kalidou Koulibaly",
-// "jersey_no": 3,
-// "injured": false,
-// "age": 32,
-// "nationality_id": 4,
-// "position_id": 3
-
+import request from '../services/api.request.js';
 import React from 'react'
 import {useState, useEffect} from 'react';
 import { useGlobalState } from '../context/GlobalState.js';
 import { Link } from "react-router-dom"
 import axios from 'axios'
 import NavbarLog from '../componets/navbar.js';
+import authHeader from '../services/auth.headers.js';
 
 export default function Player_Register () {
 
@@ -42,15 +37,33 @@ const ageInput = (e) =>
   const positionInput = (e) =>
   setPosition(e.target.value)
 
-const submit = () => {
-  axios.post('https://8000-morganmonta-leaguetable-ro14ml096ug.ws-us77.gitpod.io/api/players/', {
-"player_name": player_name,
-"jersey_no": jersey_no,
-"injured": injured,
-"age": age,
-"nationality_id": nationailty_id,
-"position_id": position_id
-  })
+// const submit = () => {
+//   axios.post('https://8000-morganmonta-leaguetable-ro14ml096ug.ws-us77.gitpod.io/api/players/', {
+// "player_name": player_name,
+// "jersey_no": jersey_no,
+// "injured": injured,
+// "age": age,
+// "nationality_id": nationailty_id,
+// "position_id": position_id
+//   })
+// }
+async function sendData() {
+  let playerObject = {
+    "player_name": player_name,
+    "jersey_no": jersey_no,
+    "injured": injured,
+    "age": age,
+    "nationality_id": nationailty_id,
+    "position_id": position_id
+  };
+  let options = {
+  url: "players/",
+  method: "POST",
+  data: {
+      ...playerObject
+  }
+  };
+  await request(options);
 }
 
   return (
@@ -65,7 +78,12 @@ const submit = () => {
       <input onChange={jerseyInput} type="number" placeholder="Jersey Number"/>
     </div>
     <div className="col-12 pb-4 d-flex justify-content-center">
-      <input onChange={injuredInput} type="text" placeholder="true or false"/>
+    <select onChange={injuredInput} className=" form-select form-select-sm bg-light" >
+  <option defaultValue={1}>Currently Injured</option>
+  <option value="true">True</option>
+  <option value="false">False</option>
+</select>
+      {/* <input onChange={injuredInput} type="text" placeholder="true or false"/> */}
     </div>
     <div className="col-12 pb-4 d-flex justify-content-center">
       <input onChange={ageInput} type="number" placeholder="Age"/>
@@ -96,8 +114,8 @@ const submit = () => {
 
 
     <div className="col-12 d-flex justify-content-center">
-      <Link to='/player'>
-        <button onClick={submit} type="button" className='btn btn-primary'>Click to Register</button>
+      <Link to='/players'>
+        <button onClick={sendData} type="button" className='btn btn-primary'>Click to Register</button>
       </Link>
     </div>
   </div>

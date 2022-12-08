@@ -22,6 +22,8 @@ import Table_page from './page/table_page';
 
 function App() { 
 
+
+
   let navigate = useNavigate()
 
   // const [data, setData] = useState(null);

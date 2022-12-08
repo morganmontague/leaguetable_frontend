@@ -7,7 +7,6 @@ import NavbarLog from "../componets/navbarloged";
 function Info(){
 return (
     <>
-    <Header />
     <NavbarLog />
     <TableExplained />
     </>

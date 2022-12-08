@@ -4,10 +4,11 @@ import React, { useState, useEffect } from "react";
 import request from "../services/api.request";
 
 
-    function TablePage(props){
+    function TablePage(){
 
 
     let [data, setData] = useState([])
+    let [data2, setData2] = useState([])
 
 
     useEffect(() => {
@@ -27,6 +28,22 @@ import request from "../services/api.request";
     )
 console.log(data)
 
+useEffect(() => {
+    async function callAPI(){
+    let options = {
+    url: 'team_players/',
+    method: 'GET', 
+    }
+    let resp = await request(options) 
+    setData2(resp.data)
+    if (!data2) {
+        return;
+      }
+    }
+    callAPI()
+}, []
+    )
+console.log(data2)
     
 
 

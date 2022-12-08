@@ -14,10 +14,13 @@ function Collapse(props) {
         >
           Players
         </button>
-  
         <div className="collapse" id={"teamInfo" + props.index}>
           <div className="card card-body" id="drop_down">
-            <li>{props.team}</li>
+          {props.player.map((player) => 
+            <li key={player.id}>
+                {player}
+            </li>
+          )}
           </div>
         </div>
       </>
@@ -25,4 +28,3 @@ function Collapse(props) {
   }
   
   export default Collapse;
-  
