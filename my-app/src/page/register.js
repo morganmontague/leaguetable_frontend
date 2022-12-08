@@ -28,7 +28,7 @@ const first_nameInput = (e) =>
   setlast_name(e.target.value)
 
 const submit = () => {
-  axios.post('https://8000-morganmonta-leaguetable-ro14ml096ug.ws-us77.gitpod.io/api/user/create/', {
+  axios.post('https://8000-morganmonta-leaguetable-ro14ml096ug.ws-us78.gitpod.io/api/user/create/', {
       "username": username,
       "password": password,
       "email": email,
@@ -58,7 +58,7 @@ const submit = () => {
       <input onChange={passwordInput} type="password" placeholder="Password"/>
     </div>
     <div className="col-12 d-flex justify-content-center">
-      <Link to='/login'>
+      <Link to='/new_user'>
         <button onClick={submit} type="button" className='btn btn-primary'>Click to Register</button>
       </Link>
     </div>

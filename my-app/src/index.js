@@ -22,6 +22,8 @@ import Register from './page/register';
 import Login from './page/login';
 import AllPlayers from './page/allPlayers';
 import MyTeam from './page/myTeam';
+import LoginReg from './page/loginregistration';
+import Team_Pick from './page/pick_team';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -37,6 +39,8 @@ root.render(
                 <Route path="/players" element={<AllPlayers />} ></Route>
                 <Route path="/myteam" element={<MyTeam />} ></Route>
                 <Route path="/new_player" element={<Player_Register />} ></Route>
+                <Route path="/new_user" element={<LoginReg />} ></Route>
+                <Route path="/team_pick" element={<Team_Pick />} ></Route>
             </Routes>
         </Router>
     </GlobalProvider>
