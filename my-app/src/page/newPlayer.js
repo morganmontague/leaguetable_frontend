@@ -71,13 +71,32 @@ const submit = () => {
       <input onChange={ageInput} type="number" placeholder="Age"/>
     </div>
     <div className="col-12 pb-4 d-flex justify-content-center">
-      <input onChange={nationInput} type="number" placeholder="Nationality"/>
+    <select onChange={nationInput} className=" form-select form-select-sm bg-light" >
+  <option defaultValue={1}>Pick the Nationality</option>
+  <option value="1">Dutch</option>
+  <option value="2">Ecuadorian</option>
+  <option value="3">Qatarian</option>
+  <option value="4">Senegalese</option>
+</select>
+      {/* <input onChange={nationInput} type="number" placeholder="Nationality"/> */}
     </div>
     <div className="col-12 pb-4 d-flex justify-content-center">
-      <input onChange={positionInput} type="number" placeholder="Position"/>
+    <select onChange={positionInput} className=" form-select form-select-sm bg-light" >
+  <option defaultValue={1}>Pick the Position</option>
+  <option value="1">Forward</option>
+  <option value="2">Midfield</option>
+  <option value="3">Defender</option>
+  <option value="4">Goal Keeper</option>
+</select>
+      {/* <input onChange={positionInput} type="number" placeholder="Position"/> */}
     </div>
+
+
+
+
+
     <div className="col-12 d-flex justify-content-center">
-      <Link to='/login'>
+      <Link to='/player'>
         <button onClick={submit} type="button" className='btn btn-primary'>Click to Register</button>
       </Link>
     </div>
