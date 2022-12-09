@@ -20,7 +20,7 @@ function Table (props) {
         num_teams.push(index + 1)
         
     }
-    let test = 0
+    let test = 1
     console.log(num_teams)
     return (
         <>

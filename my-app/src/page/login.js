@@ -5,6 +5,7 @@ import AuthService from "../services/auth.service"
 import { useNavigate } from 'react-router-dom';
 import { useGlobalState } from "../context/GlobalState.js";
 import jwtDecode from "jwt-decode";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const Login = () => {
@@ -35,7 +36,8 @@ const Login = () => {
             currentUser: data,
           })
           navigate('/home')
-        });
+        }
+        ).catch(error => toast.error('No Users with this credentials'));
     }
       return (
         <div>
@@ -54,6 +56,7 @@ const Login = () => {
           </button>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 }

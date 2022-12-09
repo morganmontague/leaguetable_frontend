@@ -51,9 +51,6 @@ return (
     <>
     <NavbarLog />
     <Table data={data} />
-    <div>
-        test
-    </div>
     </>
 )
 }

@@ -37,6 +37,8 @@ const ageInput = (e) =>
   const positionInput = (e) =>
   setPosition(e.target.value)
 
+  let [data, setData] = useState([])
+  let [newPlayer, setNewPlayer] = useState([])
 // const submit = () => {
 //   axios.post('https://8000-morganmonta-leaguetable-ro14ml096ug.ws-us77.gitpod.io/api/players/', {
 // "player_name": player_name,
@@ -47,6 +49,22 @@ const ageInput = (e) =>
 // "position_id": position_id
 //   })
 // }
+useEffect(() => {
+  async function callAPI(){
+  let options = {
+  url: 'team_players/',
+  method: 'GET', 
+  }
+  let resp = await request(options) 
+  setData(resp.data)
+  if (!data) {
+      return;
+    }
+  }
+  callAPI()
+}, []
+  )
+
 async function sendData() {
   let playerObject = {
     "player_name": player_name,
@@ -56,6 +74,7 @@ async function sendData() {
     "nationality_id": nationailty_id,
     "position_id": position_id
   };
+  
   let options = {
   url: "players/",
   method: "POST",
@@ -65,10 +84,38 @@ async function sendData() {
   };
   await request(options);
 }
+setTimeout(() => {
+  ;
+}, 1000)
+
+// useEffect(() => {
+//   async function callAPI(){
+//   let options = {
+//   url: 'players/',
+//   method: 'GET', 
+//   params: {
+//     player_name: player_name,
+//     },
+//   }
+//   let resp = await request(options) 
+//   setData(resp.data)
+//   if (!data) {
+//       return;
+//     }
+//   }
+//   callAPI()
+// }, []
+//   )
+
+
+
 
   return (
-    <div>
-      <NavbarLog/>
+    <div className='container'>
+      <div className='row'>
+        <NavbarLog/>
+        <div className='col-3'></div>
+        <div className='col-5'>
     <div className='row d-flex justify-content-center align-items-center'>
       <h2 className='pt-3 pb-3 text-center'>Register Player Here</h2>
     <div className="col-12 pb-4 d-flex justify-content-center">
@@ -79,7 +126,7 @@ async function sendData() {
     </div>
     <div className="col-12 pb-4 d-flex justify-content-center">
     <select onChange={injuredInput} className=" form-select form-select-sm bg-light" >
-  <option defaultValue={1}>Currently Injured</option>
+  <option defaultValue={1}>Injured?</option>
   <option value="true">True</option>
   <option value="false">False</option>
 </select>
@@ -90,7 +137,7 @@ async function sendData() {
     </div>
     <div className="col-12 pb-4 d-flex justify-content-center">
     <select onChange={nationInput} className=" form-select form-select-sm bg-light" >
-  <option defaultValue={1}>Pick the Nationality</option>
+  <option defaultValue={1}>Nationality?</option>
   <option value="1">Dutch</option>
   <option value="2">Ecuadorian</option>
   <option value="3">Qatarian</option>
@@ -100,7 +147,7 @@ async function sendData() {
     </div>
     <div className="col-12 pb-4 d-flex justify-content-center">
     <select onChange={positionInput} className=" form-select form-select-sm bg-light" >
-  <option defaultValue={1}>Pick the Position</option>
+  <option defaultValue={1}>Position?</option>
   <option value="1">Forward</option>
   <option value="2">Midfield</option>
   <option value="3">Defender</option>
@@ -108,11 +155,6 @@ async function sendData() {
 </select>
       {/* <input onChange={positionInput} type="number" placeholder="Position"/> */}
     </div>
-
-
-
-
-
     <div className="col-12 d-flex justify-content-center">
       <Link to='/players'>
         <button onClick={sendData} type="button" className='btn btn-primary'>Click to Register</button>
@@ -120,5 +162,9 @@ async function sendData() {
     </div>
   </div>
     </div>
+        </div>
+      </div>
+      
+
     )
 }

@@ -40,7 +40,7 @@ if(!players){
     return;
 }
 
-let key_date = Date.now()
+let key_date = 0
 
 
 return (
@@ -63,7 +63,7 @@ return (
         <div className="col-6">
         <ul className="player_page">
                 {games.map((game)=> (
-                <li key={key_date}>
+                <li key={key_date++}>
                     The team has played a recent game and the results were {game}
                 </li>
                 )
@@ -73,7 +73,7 @@ return (
         <div className="col-6">
             <ul className="player_page">
                 {players.map((player)=> (
-                <li key={key_date}>
+                <li key={key_date++}>
                     {player}
                 </li>
                 )

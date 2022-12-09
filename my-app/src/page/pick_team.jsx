@@ -44,7 +44,7 @@ useEffect(() => {
 console.log(data)
 
 
-let key_date = Date.now()
+let key_date = 0
 
 
 async function editTeam(){
@@ -66,7 +66,7 @@ async function editTeam(){
     <div className='row d-flex justify-content-center align-items-center'>
       <h2 className='pt-3 pb-3 text-center'>Please Pick a Team to Support</h2>
       {data.map((team)=> (
-                <div key={key_date}className='text-center'>
+                <div key={key_date++}className='text-center'>
                     {team.team_name}
                 </div>
       ))}
