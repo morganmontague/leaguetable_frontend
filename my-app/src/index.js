@@ -23,9 +23,12 @@ import Login from './page/login';
 import AllPlayers from './page/allPlayers';
 import MyTeam from './page/myTeam';
 import LoginReg from './page/loginregistration';
-import Team_Pick from './page/pick_team';
+import TeamPick from './page/pick_team';
+import PlayerTeamPick from './page/player_team';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+let playerNameInput = ""
+
 root.render(
     <GlobalProvider>
         <Router>
@@ -40,7 +43,8 @@ root.render(
                 <Route path="/myteam" element={<MyTeam />} ></Route>
                 <Route path="/new_player" element={<Player_Register />} ></Route>
                 <Route path="/new_user" element={<LoginReg />} ></Route>
-                <Route path="/team_pick" element={<Team_Pick />} ></Route>
+                <Route path="/team_pick" element={<TeamPick />} ></Route>
+                <Route path="/player_team" element= {<PlayerTeamPick />} ></Route>
             </Routes>
         </Router>
     </GlobalProvider>

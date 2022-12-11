@@ -51,7 +51,7 @@ body {
 }
 
 .App-link {
-  color: #61dafb;
+  color: #000d28;;
 }
 
 @keyframes App-logo-spin {
@@ -98,10 +98,24 @@ body {
   color: #0d6efd
 }
 
-/* #info_page {
+.navbar_light {
+  background-color: whitesmoke;
+  border-radius: 25px;
+  font-weight: bold;
+}
 
-} */
 
+.table_light {
+  background-color: whitesmoke;
+  border-radius: 25px;
+  font-weight: bold;
+  /* border-collapse: separate;
+  border-spacing: 15px; */
+  border: 10px solid whitesmoke;
+}
+.table{
+  border-radius: 25px;
+}
 @media (max-width: 510px) {
   .header_page {
     font-size: calc(26px + 2vmin);

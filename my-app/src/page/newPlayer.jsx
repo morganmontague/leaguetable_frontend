@@ -4,8 +4,11 @@ import {useState, useEffect} from 'react';
 import { useGlobalState } from '../context/GlobalState.js';
 import { Link } from "react-router-dom"
 import axios from 'axios'
-import NavbarLog from '../componets/navbar.js';
+import NavbarLog from '../componets/navbarloged.js';
 import authHeader from '../services/auth.headers.js';
+import PlayerTeamPick from './player_team.jsx';
+
+
 
 export default function Player_Register () {
 
@@ -38,23 +41,14 @@ const ageInput = (e) =>
   setPosition(e.target.value)
 
   let [data, setData] = useState([])
-  let [newPlayer, setNewPlayer] = useState([])
-// const submit = () => {
-//   axios.post('https://8000-morganmonta-leaguetable-ro14ml096ug.ws-us77.gitpod.io/api/players/', {
-// "player_name": player_name,
-// "jersey_no": jersey_no,
-// "injured": injured,
-// "age": age,
-// "nationality_id": nationailty_id,
-// "position_id": position_id
-//   })
-// }
+
+
 useEffect(() => {
   async function callAPI(){
   let options = {
-  url: 'team_players/',
+    url: 'team_players/',
   method: 'GET', 
-  }
+}
   let resp = await request(options) 
   setData(resp.data)
   if (!data) {
@@ -64,7 +58,8 @@ useEffect(() => {
   callAPI()
 }, []
   )
-
+  let [state, dispatch] = useGlobalState();
+  
 async function sendData() {
   let playerObject = {
     "player_name": player_name,
@@ -73,41 +68,20 @@ async function sendData() {
     "age": age,
     "nationality_id": nationailty_id,
     "position_id": position_id
-  };
-  
+  };await dispatch({
+    postData:player_name
+  })
+  setPlayername(playerObject)
   let options = {
   url: "players/",
   method: "POST",
   data: {
-      ...playerObject
+    ...playerObject
   }
   };
   await request(options);
+
 }
-setTimeout(() => {
-  ;
-}, 1000)
-
-// useEffect(() => {
-//   async function callAPI(){
-//   let options = {
-//   url: 'players/',
-//   method: 'GET', 
-//   params: {
-//     player_name: player_name,
-//     },
-//   }
-//   let resp = await request(options) 
-//   setData(resp.data)
-//   if (!data) {
-//       return;
-//     }
-//   }
-//   callAPI()
-// }, []
-//   )
-
-
 
 
   return (
@@ -143,7 +117,6 @@ setTimeout(() => {
   <option value="3">Qatarian</option>
   <option value="4">Senegalese</option>
 </select>
-      {/* <input onChange={nationInput} type="number" placeholder="Nationality"/> */}
     </div>
     <div className="col-12 pb-4 d-flex justify-content-center">
     <select onChange={positionInput} className=" form-select form-select-sm bg-light" >
@@ -153,17 +126,16 @@ setTimeout(() => {
   <option value="3">Defender</option>
   <option value="4">Goal Keeper</option>
 </select>
-      {/* <input onChange={positionInput} type="number" placeholder="Position"/> */}
     </div>
     <div className="col-12 d-flex justify-content-center">
-      <Link to='/players'>
+      <Link to='/player_team' player_info={playerNameInput} >
         <button onClick={sendData} type="button" className='btn btn-primary'>Click to Register</button>
       </Link>
     </div>
   </div>
     </div>
-        </div>
-      </div>
+  </div>
+    </div>
       
 
     )

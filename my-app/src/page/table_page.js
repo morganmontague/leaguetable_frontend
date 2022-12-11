@@ -26,7 +26,6 @@ import request from "../services/api.request";
     callAPI()
 }, []
     )
-console.log(data)
 
 useEffect(() => {
     async function callAPI(){

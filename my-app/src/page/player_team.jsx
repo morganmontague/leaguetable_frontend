@@ -4,28 +4,32 @@ import {useState, useEffect} from 'react';
 import { useGlobalState } from '../context/GlobalState.js';
 import { Link } from "react-router-dom"
 import axios from 'axios'
-import NavbarLog from '../componets/navbar.js';
+import NavbarLog from '../componets/navbarloged.js';;
 
 
-export default function TeamPick () {
+export default function PlayerTeamPick (props) {
 
   const [ state, dispatch ] = useGlobalState([]);
 
   const [team, setTeam] = useState("")
   const [data, setData] = useState("")
-
+  console.log(data)
+// console.log(state.postData)
 
 
 const teamInput = (e) => {
   setTeam(e.target.value)
 }
-
+console.log(team)
 
 useEffect(() => {
     async function callAPI(){
     let options = {
-    url: 'teams/',
-    method: 'GET', 
+    url: 'players/',
+    method: 'GET',
+    params:{
+      player_name : state.postData
+    }
     }
     let resp = await request(options) 
     setData(resp.data)
@@ -39,7 +43,11 @@ useEffect(() => {
     if (!data) {
         return;
     }
+
+    let loser = data[0]
 console.log(data)
+
+console.log(loser.id)
 
 
 let key_date = 0
@@ -47,10 +55,11 @@ let key_date = 0
 
 async function editTeam(){
     let options = {
-        url: "teams/" + team + '/',
-        method: "PUT",
+        url: "team_players/",
+        method: "POST",
         data: {
-            "user_id": state.currentUser.user_id,
+          "player": loser.id,
+          "team": team
         },
     };
     await request(options);
@@ -60,7 +69,7 @@ async function editTeam(){
 
   return (
     <div>
-      <NavbarLog/>
+      <NavbarLog />
     <div className='row d-flex justify-content-center align-items-center'>
       <h2 className='pt-3 pb-3 text-center'>Please Pick a Team to Support</h2>
       {data.map((team)=> (
@@ -68,14 +77,14 @@ async function editTeam(){
                     {team.team_name}
                 </div>
       ))}
-
+    </div>
     <div className="col-12 pb-4 d-flex justify-content-center">
     <select onChange={teamInput} className=" form-select form-select-sm bg-light" >
-  <option defaultValue={1}>Pick the Nationality</option>
-  <option value="1">Qatar</option>
-  <option value="2">Senagal</option>
-  <option value="3">Ecudor</option>
-  <option value="4">Netherlands</option>
+  <option defaultValue={1}>Nationality?</option>
+  <option value="1">Qatarian</option>
+  <option value="2">Senegalese</option>
+  <option value="3">Ecuadorian</option>
+  <option value="4">Dutch</option>
 </select>
     </div>
     <div className="col-12 d-flex justify-content-center">
@@ -84,6 +93,5 @@ async function editTeam(){
       </Link>
     </div>
   </div>
-    </div>
     )
 }

@@ -24,8 +24,9 @@ function Table (props) {
     console.log(num_teams)
     return (
         <>
-<table className="table table_hover table_bordered" id="drop_down">
-    <thead>
+        <div className="container table_light">
+        <table className="table table_hover table_bordered" id="drop_down">
+    <thead className="table">
         <tr>
         <th scope="col"><abbr title="Position">Pos</abbr></th>
         <th scope="col">Team</th>
@@ -60,6 +61,8 @@ function Table (props) {
             ))}
     </tbody>
     </table>
+        </div>
+
 </>
     ) 
 }

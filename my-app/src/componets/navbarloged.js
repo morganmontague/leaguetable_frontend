@@ -17,8 +17,8 @@ function NavbarLog(){
     return (
       <>
       <Header />
-      <div className="container">
-    <div className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <div className="container navbar_light">
+    <div className="d-flex flex-wrap justify-content-center py-3 mb-4">
       <ul className="nav nav-pills">
         <li className="nav-item">
           <Link to='/home'  className="nav-link" aria-current="page">Home</Link>

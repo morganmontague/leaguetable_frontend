@@ -7,8 +7,8 @@ import { Link } from "react-router-dom"
 function Navbar(){
     
     return (
-<div className="container">
-    <div className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+<div className="container navbar_light">
+    <div className="d-flex flex-wrap justify-content-center py-3 mb-4">
 
 
       <ul className="nav nav-pills">
