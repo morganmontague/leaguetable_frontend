@@ -99,7 +99,7 @@ async function sendData() {
       <input onChange={jerseyInput} type="number" placeholder="Jersey Number"/>
     </div>
     <div className="col-12 pb-4 d-flex justify-content-center">
-    <select onChange={injuredInput} className=" form-select form-select-sm bg-light" >
+    <select onChange={injuredInput} className=" form-select form-select-sm bg-light new_width" >
   <option defaultValue={1}>Injured?</option>
   <option value="true">True</option>
   <option value="false">False</option>
@@ -110,16 +110,7 @@ async function sendData() {
       <input onChange={ageInput} type="number" placeholder="Age"/>
     </div>
     <div className="col-12 pb-4 d-flex justify-content-center">
-    <select onChange={nationInput} className=" form-select form-select-sm bg-light" >
-  <option defaultValue={1}>Nationality?</option>
-  <option value="1">Dutch</option>
-  <option value="2">Ecuadorian</option>
-  <option value="3">Qatarian</option>
-  <option value="4">Senegalese</option>
-</select>
-    </div>
-    <div className="col-12 pb-4 d-flex justify-content-center">
-    <select onChange={positionInput} className=" form-select form-select-sm bg-light" >
+    <select onChange={positionInput} className=" form-select form-select-sm bg-light new_width" >
   <option defaultValue={1}>Position?</option>
   <option value="1">Forward</option>
   <option value="2">Midfield</option>

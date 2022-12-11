@@ -25,8 +25,8 @@ function Table (props) {
     return (
         <>
         <div className="container table_light">
-        <table className="table table_hover table_bordered" id="drop_down">
-    <thead className="table">
+        <table className="table table_hover table_bordered table_bord" id="drop_down">
+    <thead>
         <tr>
         <th scope="col"><abbr title="Position">Pos</abbr></th>
         <th scope="col">Team</th>

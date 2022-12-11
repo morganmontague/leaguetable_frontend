@@ -29,7 +29,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: whitesmoke;
 }
 .header_page{
   font-family: 'atlanta_collegeregular';
@@ -39,7 +39,8 @@ body {
   align-items: center;
   justify-content: center;
   font-size: calc(48px + 2vmin);
-  color: white;
+  color: whitesmoke;
+  margin-bottom: 1rem;
 }
 .team_names{
   display: flex;
@@ -72,7 +73,7 @@ body {
   /* background-color: #282c34; */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   font-size: calc(6px + 2vmin);
   color: white;
@@ -91,7 +92,7 @@ body {
 #drop_down {
   background-color: #184427;
   font-size: calc(4px + 2vmin);
-  color: white;
+  color: whitesmoke;
 }
 
 #link_page {
@@ -102,6 +103,7 @@ body {
   background-color: whitesmoke;
   border-radius: 25px;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 
@@ -111,12 +113,14 @@ body {
   font-weight: bold;
   /* border-collapse: separate;
   border-spacing: 15px; */
-  border: 10px solid whitesmoke;
+  border: 20px solid whitesmoke;
+  padding: 0;
 }
-.table{
+.table_bord{
   border-radius: 25px;
+  margin: 0;
 }
-@media (max-width: 510px) {
+@media (max-width: 650px) {
   .header_page {
     font-size: calc(26px + 2vmin);
     font-family: var(--bs-body-font-family);
@@ -124,4 +128,17 @@ body {
   .team_names {
     font-size: calc(22px + 2vmin);
   }
+  .new_width{
+    width: 206px;
+    height: 32px;
+    font-size: 10px;
+    color: rgb(87, 87, 87);
+  }
+}
+
+.new_width{
+  width: 338px;
+  height: 50px;
+  font-size: 25px;
+  color: rgb(87, 87, 87);
 }
