@@ -4,6 +4,7 @@ import { useGlobalState } from '../context/GlobalState.js';
 import { Link } from "react-router-dom"
 import axios from 'axios'
 import Navbar from '../componets/navbar.js';
+import { API_URL } from '../services/auth.constants.js';
 
 export default function Register () {
   const [username, setUsername] = useState("")
@@ -28,7 +29,7 @@ const first_nameInput = (e) =>
   setlast_name(e.target.value)
 
 const submit = () => {
-  axios.post('https://8000-morganmonta-leaguetable-ro14ml096ug.ws-us78.gitpod.io/api/user/create/', {
+  axios.post(API_URL + 'user/create/', {
       "username": username,
       "password": password,
       "email": email,

@@ -27,7 +27,6 @@ import Collapse from "../componets/collapse";
     callAPI()
 }, []
     )
-console.log(data)
 
 let games = data.games
 if (!games) {

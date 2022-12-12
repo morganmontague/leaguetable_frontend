@@ -16,7 +16,6 @@ import { Link } from "react-router-dom";
     let [state, dispatch] = useGlobalState();
     let navigate = useNavigate();
 
-    console.log(state)
 
     useEffect(() => {
     async function callAPI(){
@@ -33,7 +32,6 @@ import { Link } from "react-router-dom";
     callAPI()
 }, []
     )
-console.log(data)
     function function_sort(){
     data.sort(function(a, b){return b.age - a.age});
 }
@@ -43,19 +41,23 @@ data.sort(function(a, b){return b.age - a.age});
 
 return (
     <>
-    <div className=" container player_page">
     <NavbarLog />
+    <div className=" container player_page ">
     <div className="nav-items" id="link_page">
                 <Link to ='/new_player' className='nav-link' aria-current="page">
                     Add Players
                 </Link>
             </div>
-    <ul>{data.map((player) => 
+            <br></br>
+            <div className="overflow-visible over">
+                    <ul>{data.map((player) => 
         <li key={player.id}>
             Player Name: {player.player_name} and he is {player.age} years old.
         </li>
     )}
     </ul>
+            </div>
+
     </div>
     </>
 )

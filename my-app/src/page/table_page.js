@@ -42,7 +42,7 @@ useEffect(() => {
     callAPI()
 }, []
     )
-console.log(data2)
+
     
 
 
@@ -50,6 +50,7 @@ return (
     <>
     <NavbarLog />
     <Table data={data} />
+    <img src="/workspace/leaguetable_frontend/my-app/src/IMG/netherlands.png"></img>
     </>
 )
 }

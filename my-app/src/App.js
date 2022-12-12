@@ -26,17 +26,9 @@ function App() {
 
   let navigate = useNavigate()
 
-  // const [data, setData] = useState(null);
-  // useEffect(() =>{
-  //   axios.get(TEAMURL).then((response) =>{ setData(response.data)
-  //   });
-    
-  // }, []);
 
-  function TableSwapFunction () {
-    <Table_page  />
-    navigate('/table')
-  }
+
+
   return (
     <div className="App">
       

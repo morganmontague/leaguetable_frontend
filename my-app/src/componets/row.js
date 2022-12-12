@@ -4,14 +4,14 @@ function Row (props) {
         <>
         <tr>
             <td>{props.position}</td>
-            <td >{props.team}</td>
+            <td>{props.team}</td>
             <td>{props.games_played}</td>
             <td>{props.wins}</td>
             <td>{props.ties}</td>
             <td>{props.losses}</td>
             <td>{props.goals_scored}</td>
-            <td>Meh</td>
-            <td>TBD</td>
+            <td>{props.goals_lost}</td>
+            <td>{props.goal_dif}</td>
             <td>{props.points}</td>
         </tr>
         </>

@@ -13,14 +13,13 @@ export default function PlayerTeamPick (props) {
 
   const [team, setTeam] = useState("")
   const [data, setData] = useState("")
-  console.log(data)
-// console.log(state.postData)
+
 
 
 const teamInput = (e) => {
   setTeam(e.target.value)
 }
-console.log(team)
+
 
 useEffect(() => {
     async function callAPI(){
@@ -45,9 +44,6 @@ useEffect(() => {
     }
 
     let loser = data[0]
-console.log(data)
-
-console.log(loser.id)
 
 
 let key_date = 0

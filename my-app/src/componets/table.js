@@ -54,6 +54,8 @@ function Table (props) {
                     ties={team.ties} 
                     losses={team.losses}
                     goals_scored={team.goals_scored}
+                    goals_lost={team.goals_lost}
+                    goal_dif={team.goal_dif}
                     points={team.points}
                     />
                     

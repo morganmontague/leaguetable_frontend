@@ -86,8 +86,8 @@ async function sendData() {
 
   return (
     <div className='container'>
-      <div className='row'>
         <NavbarLog/>
+      <div className='row'>
         <div className='col-3'></div>
         <div className='col-5'>
     <div className='row d-flex justify-content-center align-items-center'>

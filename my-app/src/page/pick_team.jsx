@@ -39,7 +39,7 @@ useEffect(() => {
     if (!data) {
         return;
     }
-console.log(data)
+
 
 
 let key_date = 0
@@ -69,7 +69,7 @@ async function editTeam(){
                 </div>
       ))}
 
-    <div className="col-12 pb-4 d-flex justify-content-center">
+    <div className="col-12 pb-4 d-flex justify-content-center new_width">
     <select onChange={teamInput} className=" form-select form-select-sm bg-light" >
   <option defaultValue={1}>Pick the Nationality</option>
   <option value="1">Qatar</option>
