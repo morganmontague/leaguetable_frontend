@@ -1,5 +1,4 @@
-import Navbar from "../componets/navbar";
-import Header from "../componets/header";
+
 import TableExplained from "../componets/tableExplained";
 import NavbarLog from "../componets/navbarloged";
 

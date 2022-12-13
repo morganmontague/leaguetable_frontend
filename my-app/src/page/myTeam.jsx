@@ -20,9 +20,7 @@ import Collapse from "../componets/collapse";
     }
     let resp = await request(options) 
     setData(resp.data)
-    // if (!data) {
-    //     return;
-    //   }
+
     }
     callAPI()
 }, []

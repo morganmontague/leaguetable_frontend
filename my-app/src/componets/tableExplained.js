@@ -20,6 +20,15 @@ function TableExplained () {
                     The total number of points a team has is based on the number of games they have won or drawn. The higher 
                     number of points they have, the higher the team will be in the league table.
                 </div>
+                <br></br>
+                <h3>
+                    What happens if two teams have the same amount of points?
+                </h3>
+                <div>
+                    If two or more teams have the same amount of points, other methods are used to determine the outcome. The most common is 
+                    goal differential, and it is calculated as the number of goals scored in all league matches minus the number of goals conceded.
+                    The 2022 World Cup has added another layer to this for the times where even goal differential is even. The world cup implimented counting yellow cards as the tie breaker.
+                </div>
             </div>
         </div>    
     )

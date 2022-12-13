@@ -5,8 +5,7 @@ import { useGlobalState } from '../context/GlobalState.js';
 import { Link } from "react-router-dom"
 import axios from 'axios'
 import NavbarLog from '../componets/navbarloged.js';
-import authHeader from '../services/auth.headers.js';
-import PlayerTeamPick from './player_team.jsx';
+
 
 
 

@@ -43,7 +43,7 @@ useEffect(() => {
         return;
     }
 
-    let loser = data[0]
+    let current_player = data[0]
 
 
 let key_date = 0
@@ -54,7 +54,7 @@ async function editTeam(){
         url: "team_players/",
         method: "POST",
         data: {
-          "player": loser.id,
+          "player": current_player.id,
           "team": team
         },
     };

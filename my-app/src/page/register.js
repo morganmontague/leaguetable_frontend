@@ -35,7 +35,7 @@ const submit = () => {
       "email": email,
       "first_name": first_name,
       "last_name": last_name
-  })
+  }).catch(success => toast.success('Correctly Registered'))
 }
 
   return (

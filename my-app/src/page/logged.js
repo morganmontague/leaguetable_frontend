@@ -15,7 +15,7 @@ function Logged() {
     let [data, setData] = useState([])
     let [state, dispatch] = useGlobalState();
 
-    console.log(state)
+
 
     useEffect(() => {
     async function testing(){

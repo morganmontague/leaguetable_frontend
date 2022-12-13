@@ -1,11 +1,11 @@
 import NavbarLog from "../componets/navbarloged";
-import Table from "../componets/table";
+
 
 import React, { useState, useEffect } from "react";
 import { useGlobalState } from "../context/GlobalState";
 import { useNavigate } from 'react-router-dom';
 import request from "../services/api.request";
-import Player_Register from "./newPlayer";
+
 import { Link } from "react-router-dom";
 
 

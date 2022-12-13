@@ -2,6 +2,7 @@ import NavbarLog from "../componets/navbarloged";
 import Table from "../componets/table";
 import React, { useState, useEffect } from "react";
 import request from "../services/api.request";
+import img from "../IMG/netherlands.png"
 
 
     function TablePage(){
@@ -50,7 +51,6 @@ return (
     <>
     <NavbarLog />
     <Table data={data} />
-    <img src="/workspace/leaguetable_frontend/my-app/src/IMG/netherlands.png"></img>
     </>
 )
 }

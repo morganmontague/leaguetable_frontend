@@ -27,7 +27,6 @@ import TeamPick from './page/pick_team';
 import PlayerTeamPick from './page/player_team';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-let playerNameInput = ""
 
 root.render(
     <GlobalProvider>
