@@ -37,7 +37,7 @@ if(!players){
     return;
 }
 
-let key_date = 0
+let key_num = 0
 
 
 return (
@@ -60,7 +60,7 @@ return (
         <div className="col-6">
         <ul className="player_page">
                 {games.map((game)=> (
-                <li key={key_date++}>
+                <li key={key_num++}>
                     The team has played a recent game and the results was {game}
                 </li>
                 )
@@ -70,7 +70,7 @@ return (
         <div className="col-6">
             <ul className="player_page">
                 {players.map((player)=> (
-                <li key={key_date++}>
+                <li key={key_num++}>
                     {player}
                 </li>
                 )
