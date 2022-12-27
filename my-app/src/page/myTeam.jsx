@@ -61,7 +61,7 @@ return (
         <ul className="player_page">
                 {games.map((game)=> (
                 <li key={key_date++}>
-                    The team has played a recent game and the results were {game}
+                    The team has played a recent game and the results was {game}
                 </li>
                 )
                 )}

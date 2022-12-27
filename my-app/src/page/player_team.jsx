@@ -15,7 +15,11 @@ export default function PlayerTeamPick (props) {
   const [data, setData] = useState("")
 
 
-
+  let one = 1
+  let two = 2
+  if(one = two){
+    console.log(yes)
+  }
 const teamInput = (e) => {
   setTeam(e.target.value)
 }

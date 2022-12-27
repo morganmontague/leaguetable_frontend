@@ -19,6 +19,7 @@ function Collapse(props) {
           {props.player.map((player) => 
             <li key={player.id}>
                 {player}
+                testing
             </li>
           )}
           </div>

@@ -7,6 +7,12 @@ import Header from './header';
 // import Axios from 'axios'
 
 function NavbarLog(){
+    let one = 1
+    let two = 2
+    if(one = two){
+      console.log(yes)
+    }
+      
     
     let navigate = useNavigate();
     function Logout() {

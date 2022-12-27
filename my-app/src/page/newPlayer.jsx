@@ -19,7 +19,11 @@ export default function Player_Register () {
   const [nationailty_id, setNation] = useState("")
   const [position_id, setPosition] = useState("")
 
-
+  let one = 1
+  let two = 2
+  if(one = two){
+    console.log(yes)
+  }
 
 const playerNameInput = (e) => {
   setPlayername(e.target.value)
